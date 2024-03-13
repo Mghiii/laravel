@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RouteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[RouteController::class,'index'])->name('home.index');
+Route::get('/about',[RouteController::class,'about'])->name('home.about');
+Route::get('/contact',[RouteController::class,'contact'])->name('home.contact');
+Route::get('/portfolio',[RouteController::class,'portfolio'])->name('home.portfolio');
