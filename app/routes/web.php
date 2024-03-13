@@ -19,4 +19,4 @@ Route::get('/about',[RouteController::class,'about'])->name('home.about');
 Route::get('/contact',[RouteController::class,'contact'])->name('home.contact');
 Route::get('/portfolio',[RouteController::class,'portfolio'])->name('home.portfolio');
 //-----------
-Route::get('/pages/index',[RessourceController::class,'index']);
+Route::resource('infos',RessourceController::class);

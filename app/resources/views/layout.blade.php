@@ -10,16 +10,16 @@
 </head>
 
 <body>
-    <div>
-        <nav>
-            <ul>
-                <li><a href="{{ route('home.index') }}">home</a></li>
-                <li><a href="{{ route('home.about') }}">about</a></li>
-                <li><a href="{{ route('home.contact') }}">contact</a></li>
-                <li><a href="{{ route('home.portfolio') }}">portfolio</a></li>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="{{ route('home.index') }}" class="navbar-link">home</a></li>
+                <li class="navbar-item"><a href="{{ route('home.about') }}" class="navbar-link">about</a></li>
+                <li class="navbar-item"><a href="{{ route('home.contact') }}" class="navbar-link">contact</a></li>
+                <li class="navbar-item"><a href="{{ route('home.portfolio') }}" class="navbar-link">portfolio</a></li>
             </ul>
         </nav>
-        <div>
+        <div class="content">
             @yield('content')
         </div>
     </div>

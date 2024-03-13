@@ -6,57 +6,58 @@ use Illuminate\Http\Request;
 
 class RessourceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    private static function getData() {
+        return [
+            ['id' => 1, 'name' => 'abderrahim', 'age' => 24],
+            ['id' => 2, 'name' => 'hmad', 'age' => 20],
+            ['id' => 3, 'name' => '3bass', 'age' => 50]
+        ];
+    }
+    
+
     public function index()
     {
-        return view("pages.index");
+        return view("infos.index", [
+            'data' => self::getData()
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
-        //
+        $data = self::getData();
+        $getId = array_search($id, array_column($data, 'id'));
+        if($getId === false){
+            abort(404);
+        };
+        return view('infos.show',[
+            'data' => $data[$getId]
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
         //
