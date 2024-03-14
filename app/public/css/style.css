@@ -151,3 +151,18 @@ body {
 .edit-btn:hover {
     background-color: #2980b9;
 }
+
+.destroy-btn {
+    display: inline-block;
+    padding: 7px 7.5px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.destroy-btn:hover {
+    background-color: #c0392b;
+}

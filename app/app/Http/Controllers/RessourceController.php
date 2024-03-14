@@ -68,7 +68,9 @@ class RessourceController extends Controller
             'name' => 'required',
             'age' => ['required','integer']
         ]);
+
         $to_update = Infos::findOrFail($id);
+
         $to_update->name = strip_tags($request->input("name"));
         $to_update->age = strip_tags($request->input("age"));
         $to_update->save();
@@ -79,6 +81,8 @@ class RessourceController extends Controller
 
     public function destroy(string $id)
     {
-        //
+        $to_delete = Infos::findOrFail($id);
+        $to_delete->delete();
+        return redirect()->route('infos.index');
     }
 }
