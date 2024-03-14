@@ -9,6 +9,7 @@
                 <li class="data-list-item">{{ $data['id'] }}</li>
                 <li class="data-list-item">{{ $data['name'] }}</li>
                 <li class="data-list-item">{{ $data['age'] }}</li>
+                <a href="{{ route('infos.edit', $data['id']) }}" class="edit-btn">edit</a>
             </ul>
         </div>
     </div>

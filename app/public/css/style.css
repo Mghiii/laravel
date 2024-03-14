@@ -83,3 +83,71 @@ body {
 .data-list-item a:hover {
     color: #2980b9;
 }
+/* ---------- */
+/* Form container style */
+.form-container {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Form style */
+.user-form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Form group style */
+.form-group {
+    margin-bottom: 10px;
+}
+
+/* Form label style */
+.form-label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Form input style */
+.form-input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Submit button style */
+.form-submit {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #2980b9;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.edit-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
